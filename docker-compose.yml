@@ -14,7 +14,7 @@ services:
     image: alextselegidis/easyappointments:${SOFTWARE_VERSION_TAG}
     restart: always
     environment:
-      - BASE_URL=https://${CI_CD_DOMAIN}
+      - BASE_URL=https://${DOMAIN}
       - DEBUG_MODE=TRUE
       - DB_HOST=db
       - DB_NAME=easyappointments

@@ -12,9 +12,7 @@ Deploy EasyAppointments with CI/CD on Elestio
 
 You can open EasyAppointments UI here:
 
-    URL: https://[CI_CD_DOMAIN]/admin
-    email: [ADMIN_EMAIL]
-    password: [ADMIN_PASSWORD]
+    URL: https://[CI_CD_DOMAIN]
 
 You can open PHPMyAdmin here:
 
