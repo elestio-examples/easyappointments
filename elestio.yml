@@ -55,7 +55,7 @@ lifeCycleConfig:
   postRestoreCommand: "./scripts/postRestore.sh"
   postDeployCommand: "./scripts/postDeploy.sh"
 webUI:
-  - url: "https://[CI_CD_DOMAIN]"
+  - url: "https://[CI_CD_DOMAIN]/index.php/backend"
     label: "EasyAppointments Admin"
-    login: admin
-    password: [ADMIN_PASSWORD]
+    login: "admin"
+    password: "[ADMIN_PASSWORD]"
