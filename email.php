@@ -5,12 +5,9 @@
 // @link https://codeigniter.com/user_guide/libraries/email.html
 
 $config['useragent'] = 'Easy!Appointments';
-$config['protocol'] = 'smtp'; // or 'smtp'
-$config['mailtype'] = 'html'; // or 'text'
-$config['smtp_debug'] = '1'; // or '1'
-$config['smtp_auth'] = TRUE; //or FALSE for anonymous relay.
-$config['smtp_host'] = 'SMTP_HOST_TO_CHANGE';
-$config['smtp_user'] = 'SMTP_USER_TO_CHANGE';
-$config['smtp_pass'] = 'SMTP_PASS_TO_CHANGE';
-$config['smtp_crypto'] = 'ssl'; // or 'tls'
-$config['smtp_port'] = 465;
+$config['protocol'] = 'smtp';
+$config['mailtype'] = 'html';
+$config['smtp_debug'] = '1';
+$config['smtp_auth'] = FALSE;
+$config['smtp_host'] = '172.17.0.1';
+$config['smtp_port'] = 25;

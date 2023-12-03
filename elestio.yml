@@ -27,10 +27,16 @@ ports:
 environments:
   - key: "SOFTWARE_VERSION_TAG"
     value: "latest"
+  - key: "ADMIN_EMAIL"
+    value: "[EMAIL]"
+  - key: "ADMIN_PASSWORD"
+    value: "random_password"
   - key: "DATABASE_PASSWORD"
-    value: "random_password8"
+    value: "random_password"
   - key: "DOMAIN"
     value: "[CI_CD_DOMAIN]"
+  - key: "SMTP_FROM_EMAIL"
+    value: "[DOMAIN]@vm.elestio.app"
 config:
   runTime: "dockerCompose"
   version: ""
@@ -51,3 +57,5 @@ lifeCycleConfig:
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
     label: "EasyAppointments Admin"
+    login: admin
+    password: [ADMIN_PASSWORD]
