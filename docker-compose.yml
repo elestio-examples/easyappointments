@@ -7,18 +7,23 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${DATABASE_PASSWORD}
-      - MYSQL_PASSWORD=${DATABASE_PASSWORD}
-      - MYSQL_USERNAME=easyappointments
       - MYSQL_DATABASE=easyappointments
     ports:
       - "172.17.0.1:3881:3306"
   server:
-    image: elestio4test/easyappointments:${SOFTWARE_VERSION_TAG}
+    image: alextselegidis/easyappointments:${SOFTWARE_VERSION_TAG}
     restart: always
+    environment:
+      - BASE_URL=https://${CI_CD_DOMAIN}
+      - DEBUG_MODE=TRUE
+      - DB_HOST=db
+      - DB_NAME=easyappointments
+      - DB_USERNAME=root
+      - DB_PASSWORD=${DATABASE_PASSWORD}
     ports:
       - "172.17.0.1:18970:80"
-    # volumes:
-    #     - ./server/php.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+    volumes:
+      - ./email.php:/var/www/html/application/config/email.php
 
   pma:
     image: elestio/phpmyadmin:latest

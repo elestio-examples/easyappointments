@@ -29,6 +29,8 @@ environments:
     value: "latest"
   - key: "DATABASE_PASSWORD"
     value: "random_password8"
+  - key: "DOMAIN"
+    value: "[CI_CD_DOMAIN]"
 config:
   runTime: "dockerCompose"
   version: ""
