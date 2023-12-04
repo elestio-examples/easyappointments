@@ -21,3 +21,5 @@ You can open PHPMyAdmin here:
     URL: https://[CI_CD_DOMAIN]:19566
     login: root
     password: [ADMIN_PASSWORD]
+
+More Information: [Overview Documentation](https://easyappointments.org/docs.html#1.4.3/readme.md)
